@@ -1,0 +1,23 @@
+<p>empleado-hijo works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div>
+        <a [routerLink]="['/editar', indice]">
+          {{ indice + 1 }} {{ empleadoIndividual.nombre }}
+          {{ empleadoIndividual.apellido }} {{ empleadoIndividual.cargo }}
+          {{ empleadoIndividual.salario }}
+        </a>
+        <br />
+        <app-caracteristicas-empleado
+          (CaracteristicasEmpleadoHijo)="agregarCaracteristica($event)"
+        ></app-caracteristicas-empleado>
+        <ul style="list-style: none">
+          <li *ngFor="let caracteristica of arrayCaracteristicas">
+            {{ caracteristica }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

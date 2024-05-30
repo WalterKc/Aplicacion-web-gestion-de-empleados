@@ -1,0 +1,62 @@
+<p>pagina-proyectos works!</p>
+<div class="container">
+  <button class="btn btn-primary" (click)="volverHome()">Volver</button>
+</div>
+
+<div class="container">
+  <div class="col">
+    <h1>{{ title }}</h1>
+    <br /><br />
+    <form class="form-group row">
+      <div class="form-group col-md-3">
+        <label for="nombre">Nombre:</label>
+        <input
+          type="text"
+          name="nombre"
+          placeholder="nombre"
+          [(ngModel)]="nombre"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group col-md-3">
+        <label for="apellido">Apellido:</label>
+        <input
+          type="text"
+          name="apellido"
+          placeholder="apellido"
+          [(ngModel)]="apellido"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group col-md-3">
+        <label for="puesto">Puesto:</label>
+        <input
+          type="text"
+          name="puesto"
+          placeholder="puesto"
+          [(ngModel)]="puesto"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group col-md-3">
+        <label for="nombre">salario:</label>
+        <input
+          type="number"
+          name="salario"
+          placeholder="salario"
+          [(ngModel)]="salario"
+          class="form-control"
+        />
+        <div class="col">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            (click)="agregarEmpleado()"
+          >
+            agregar empleado
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
